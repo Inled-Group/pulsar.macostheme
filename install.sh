@@ -23,31 +23,31 @@ usage() {
   # Please specify their default value manually, some of them come from _variables.scss
   # You also have to check and update them regularly
   helpify_title
-  helpify "-d, --dest"                    "DIR"                                               "  Set destination directory"                      "Default is '${THEME_DIR}'"
-  helpify "-n, --name"                    "NAME"                                              "  Set theme name"                                 "Default is '${THEME_NAME}'"
-  helpify "-o, --opacity"                 "[$(IFS='|'; echo "${OPACITY_VARIANTS[*]}")]"       "  Set theme opacity variants"                     "Repeatable. Default is all variants"
-  helpify "-c, --color"                   "[$(IFS='|'; echo "${COMMAND_COLOR_VARIANTS[*]}")]" "  Set theme color variants"                       "Repeatable. Default is all variants"
-  helpify "-a, --alt"                     "[$(IFS='|'; echo "${ALT_VARIANTS[*]}")|all]"       "  Set window control buttons variant"             "Repeatable. Default is 'normal'"
-  helpify "-t, --theme"                   "[$(IFS='|'; echo "${THEME_VARIANTS[*]}")|all]"     "  Set theme accent color"                         "Repeatable. Default is BigSur-like theme"
-  helpify "-s, --scheme"                  "[$(IFS='|'; echo "${SCHEME_VARIANTS[*]}")]"        "  Set theme colorscheme style"                    "Repeatable. Default is 'standard'"
-#  helpify "-s, --size"                    "[$(IFS='|'; echo "${SIDEBAR_SIZE_VARIANTS[*]}")]"  "  Set Nautilus (version < 40.0) sidebar minimum width" "Default is 200px"
+  helpify "-d, --dest"                    "DIR"                                               "  Configura destination directory"                      "Predeterminado es '${THEME_DIR}'"
+  helpify "-n, --name"                    "NAME"                                              "  Configura theme name"                                 "Predeterminado es '${THEME_NAME}'"
+  helpify "-o, --opacity"                 "[$(IFS='|'; echo "${OPACITY_VARIANTS[*]}")]"       "  Configura theme opacity variants"                     "Repeatable. Predeterminado es all variants"
+  helpify "-c, --color"                   "[$(IFS='|'; echo "${COMMAND_COLOR_VARIANTS[*]}")]" "  Configura theme color variants"                       "Repeatable. Predeterminado es all variants"
+  helpify "-a, --alt"                     "[$(IFS='|'; echo "${ALT_VARIANTS[*]}")|all]"       "  Configura window control buttons variant"             "Repeatable. Predeterminado es 'normal'"
+  helpify "-t, --theme"                   "[$(IFS='|'; echo "${THEME_VARIANTS[*]}")|all]"     "  Configura theme accent color"                         "Repeatable. Predeterminado es BigSur-like theme"
+  helpify "-s, --scheme"                  "[$(IFS='|'; echo "${SCHEME_VARIANTS[*]}")]"        "  Configura theme colorscheme style"                    "Repeatable. Predeterminado es 'standard'"
+#  helpify "-s, --size"                    "[$(IFS='|'; echo "${SIDEBAR_SIZE_VARIANTS[*]}")]"  "  Configura Nautilus (version < 40.0) sidebar minimum width" "Predeterminado es 200px"
 
-  helpify "-m, --monterey"                ""                                                  "  Set to MacOS Monterey style"                     ""
-  helpify "-N, --nautilus"                "[$(IFS='|'; echo "${NAUTILUS_STYLE_VARIANTS[*]}")]" "  Set Nautilus style"                             "Default is BigSur-like style (stabled sidebar)"
-  helpify "-l, --libadwaita"              ""                                                  "  Install theme into gtk4.0 config for libadwaita" "Default is dark version"
-  helpify "-f, --fixed"                   ""                                                  "  Install fixed accent color version"              "Default is adaptive version"
-  helpify "-HD, --highdefinition"         ""                                                  "  Set to High Definition size"                     "Default is laptop size"
+  helpify "-m, --monterey"                ""                                                  "  Configura to MacOS Monterey style"                     ""
+  helpify "-N, --nautilus"                "[$(IFS='|'; echo "${NAUTILUS_STYLE_VARIANTS[*]}")]" "  Configura Nautilus style"                             "Predeterminado es BigSur-like style (stabled sidebar)"
+  helpify "-l, --libadwaita"              ""                                                  "  Instala el tema en gtk4.0 config for libadwaita" "Predeterminado es dark version"
+  helpify "-f, --fixed"                   ""                                                  "  Install fixed accent color version"              "Predeterminado es adaptive version"
+  helpify "-HD, --highdefinition"         ""                                                  "  Configura to High Definition size"                     "Predeterminado es laptop size"
 
   helpify "--shell, --gnomeshell"         ""                                                  "  Tweaks for gnome-shell"                          "Options:"
-  helpify "   1. -i, -icon"               "[$(IFS='|'; echo "${ICON_VARIANTS[*]}")]"          "    Set gnome-shell panel 'Activities' icon"       "Default is 'standard'"
-  helpify "   2. -b, -background"         "[default|blank|IMAGE_PATH]"                        "    Set gnome-shell background image"              "Default is BigSur-like wallpaper"
-  helpify "   3. -p, -panelopacity"       "[$(IFS='|'; echo "${PANEL_OPACITY_VARIANTS[*]}")]" "    Set gnome-shell panel transparency"            "Default is 15%"
-  helpify "   4. -h, -panelheight"        "[$(IFS='|'; echo "${PANEL_SIZE_VARIANTS[*]}")]"    "    Set gnome-shell panel height size"             "Default is 32px"
-  helpify "   5. -sf, -smallerfont"       ""                                                  "    Set gnome-shell font size to smaller (10pt)"   "Default is 11pt"
-  helpify "   6. normal, -normal"         ""                                                  "    Set gnome-shell show apps button style to normal" "Default is BigSur"
+  helpify "   1. -i, -icon"               "[$(IFS='|'; echo "${ICON_VARIANTS[*]}")]"          "    Configura gnome-shell panel 'Activities' icon"       "Predeterminado es 'standard'"
+  helpify "   2. -b, -background"         "[default|blank|IMAGE_PATH]"                        "    Configura gnome-shell background image"              "Predeterminado es BigSur-like wallpaper"
+  helpify "   3. -p, -panelopacity"       "[$(IFS='|'; echo "${PANEL_OPACITY_VARIANTS[*]}")]" "    Configura gnome-shell panel transparency"            "Predeterminado es 15%"
+  helpify "   4. -h, -panelheight"        "[$(IFS='|'; echo "${PANEL_SIZE_VARIANTS[*]}")]"    "    Configura gnome-shell panel height size"             "Predeterminado es 32px"
+  helpify "   5. -sf, -smallerfont"       ""                                                  "    Configura gnome-shell font size to smaller (10pt)"   "Predeterminado es 11pt"
+  helpify "   6. normal, -normal"         ""                                                  "    Configura gnome-shell show apps button style to normal" "Predeterminado es BigSur"
 
-  helpify "--round, --roundedmaxwindow"   ""                                                  "  Set maximized window to rounded"                 "Default is square"
-  helpify "--black, --blackfont"          ""                                                  "  Set panel font color to black"                   "Default is white"
+  helpify "--round, --roundedmaxwindow"   ""                                                  "  Configura maximized window to rounded"                 "Predeterminado es square"
+  helpify "--black, --blackfont"          ""                                                  "  Set panel font color to black"                   "Predeterminado es white"
   helpify "--darker, --darkercolor"       ""                                                  "  Install darker '${THEME_NAME}' dark themes"      ""
   helpify "--dialog, --interactive"       ""                                                  "  Run this installer interactively, with dialogs"  ""
   helpify "--silent-mode"                 ""                                                  "  Meant for developers: ignore any confirm prompt and params become more strict" ""
@@ -141,7 +141,7 @@ while [[ $# -gt 0 ]]; do
     -h|--help)
       need_help="true"; shift ;;
     *)
-      prompt -e "ERROR: Unrecognized installation option '${1}'."
+      prompt -e "ERROR: Opción de instalación no reconocida '${1}'."
       has_any_error="true"; shift ;;
   esac
 done
@@ -154,19 +154,19 @@ if [[ "${uninstall}" == 'true' ]]; then
   if [[ "${libadwaita}" == 'true' ]]; then
     if [[ "$UID" != '0' ]]; then
       remove_libadwaita
-      prompt -s "Removed gtk-4.0 theme files in '${HOME}/.config/gtk-4.0/'!"
+      prompt -s "Eliminados archivos de Gtk4.0 en '${HOME}/.config/gtk-4.0/'!"
     else
-      prompt -e "Do not run '--libadwaita' option with sudo!"; echo
+      prompt -e "No arranque la opción --libadwaita con sudo!"; echo
     fi
   else
-    prompt -i "Removing '${name}' gtk themes in '${dest}'... \n"
-    prompt -w "REMOVAL: Non-file-related parameters will be ignored. \n"
+    prompt -i "Eliminando '${name}' temas de gtk en '${dest}'... \n"
+    prompt -w "ELIMINACIÓN: Non-file-related parameters will be ignored. \n"
     remove_themes; remove_libadwaita
-    prompt -s "Done! All '${name}' gtk themes have been removed."
+    prompt -s "Listo! Todos los '${name}' temas de gtk han sido eliminados."
   fi
 
   if [[ -f "${MISC_GR_FILE}.bak" ]]; then
-    prompt -e "Find installed GDM theme, you need to run: 'sudo ./tweaks.sh -g -r' to remove it!"
+    prompt -e "Hemos encontrado instalado un tema de GDM, tienes que hacer: 'sudo ./tweaks.sh -g -r' para eliminarlo!"
   fi
 else
   if [[ "${interactive}" == 'true' ]]; then
@@ -177,7 +177,7 @@ else
 #    show_needed_dialogs
   fi
 
-  prompt -w "Removing the old '${name}' themes...\n"
+  prompt -w "Eliminando los viejos '${name}' temas\n"
 
   if [[ "${libadwaita}" != 'true' ]]; then
     remove_themes
@@ -185,30 +185,30 @@ else
 
   customize_theme; avoid_variant_duplicates;
 
-  prompt -w "Installing '${name}' themes in '${dest}'...\n";
+  prompt -w "Instalando los temas '${name}' en '${dest}'...\n";
 
   prompt -t "--->>> GTK | GNOME Shell | Cinnamon | Metacity | XFWM | Plank <<<---"
-  prompt -i "Color variants   : $( IFS=';'; echo "${colors[*]}" )"
-  prompt -i "Theme variants   : $( IFS=';'; echo "${themes[*]}" )"
-  prompt -i "Opacity variants : $( IFS=';'; echo "${opacities[*]}" )"
+  prompt -i "Variantes de color   : $( IFS=';'; echo "${colors[*]}" )"
+  prompt -i "Variantes de tema   : $( IFS=';'; echo "${themes[*]}" )"
+  prompt -i "Variantes de opacidad : $( IFS=';'; echo "${opacities[*]}" )"
   prompt -i "Alt variants     : $( IFS=';'; echo "${alts[*]}" )"
-  prompt -i "Scheme variants  : $( IFS=';'; echo "${schemes[*]}" )"
-  prompt -i "Start icon style : ${icon}"
-  prompt -i "Nautilus style   : ${nautilus_style}"
+  prompt -i "variantes de esquema  : $( IFS=';'; echo "${schemes[*]}" )"
+  prompt -i "Estilo de start icono : ${icon}"
+  prompt -i "Estilo del Nautilus   : ${nautilus_style}"
 
   if [[ "${libadwaita}" == 'true' ]]; then
     if [[ "$UID" != '0' ]]; then
       install_libadwaita
-      echo; prompt -w "Some colorsheme extension will re-writes config files in '${HOME}/.config/gtk-4.0' like: 'custom-accent-colors' you need disable it!"
+      echo; prompt -w "Alguna extensión puede reescribir los ficheros de configuración en '${HOME}/.config/gtk-4.0' como: 'custom-accent-colors' ¡tienes que desactivarla, por favor!"
     else
-      echo; prompt -e "Do not run '--libadwaita' option with sudo!"
+      echo; prompt -e "No uses --libadwaita con sudo!"
     fi
   else
-    echo; install_themes; echo; prompt -s "Done!"
+    echo; install_themes; echo; prompt -s "¡Hecho!"
   fi
 
   if (is_my_distro "solus") && (is_running "gnome-session"); then
-    msg="GNOME: you may need to disable 'User Themes' extension to fix your dock."
+    msg="GNOME: puede que tengas que desactivar la extensión User Themes para corregir el dock"
   fi
 
   if [[ "${msg}" ]]; then

@@ -48,13 +48,13 @@ echo >> ${RELEASE_DIR}/release-info.txt
 echo "RELEASE TIME: $(date)" >> ${RELEASE_DIR}/release-info.txt
 echo >> ${RELEASE_DIR}/release-info.txt
 echo "--->>> GTK | GNOME Shell | Cinnamon | Metacity | XFWM | Plank <<<---" >> ${RELEASE_DIR}/release-info.txt
-echo "Color variants   : $( IFS=';'; echo "${colors[*]}" )" >> ${RELEASE_DIR}/release-info.txt
-echo "Theme variants   : $( IFS=';'; echo "${themes[*]}" )" >> ${RELEASE_DIR}/release-info.txt
-echo "Opacity variants : $( IFS=';'; echo "${opacities[*]}" )" >> ${RELEASE_DIR}/release-info.txt
+echo "Variantes de color   : $( IFS=';'; echo "${colors[*]}" )" >> ${RELEASE_DIR}/release-info.txt
+echo "Variantes de tema   : $( IFS=';'; echo "${themes[*]}" )" >> ${RELEASE_DIR}/release-info.txt
+echo "Varianets de opacidad : $( IFS=';'; echo "${opacities[*]}" )" >> ${RELEASE_DIR}/release-info.txt
 echo "Alt variants     : $( IFS=';'; echo "${alts[*]}" )" >> ${RELEASE_DIR}/release-info.txt
-echo "Scheme variants  : $( IFS=';'; echo "${SCHEME_VARIANTS[*]}" )" >> ${RELEASE_DIR}/release-info.txt
-echo "Start icon style : ${icon}" >> ${RELEASE_DIR}/release-info.txt
-echo "Nautilus style   : ${nautilus_style}" >> ${RELEASE_DIR}/release-info.txt
+echo "Varianets de esquema  : $( IFS=';'; echo "${SCHEME_VARIANTS[*]}" )" >> ${RELEASE_DIR}/release-info.txt
+echo "Estilod e botón de inicio : ${icon}" >> ${RELEASE_DIR}/release-info.txt
+echo "Estilo del Nautilus   : ${nautilus_style}" >> ${RELEASE_DIR}/release-info.txt
 }
 
 #GNOME_VERSION="3-28"
@@ -65,8 +65,8 @@ echo "Nautilus style   : ${nautilus_style}" >> ${RELEASE_DIR}/release-info.txt
 GNOME_VERSION="48-0"
 RELEASE_VERSION="48.0"
 install && compress
-prompt -i "Compress ${THEME_NAME} themes finished!\n"
+prompt -i "Compress ${THEME_NAME} themes TERMINADO!\n"
 release_info
-prompt -s "Done!"; echo
+prompt -s "¡Hecho!"; echo
 
 exit 0

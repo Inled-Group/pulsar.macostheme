@@ -53,9 +53,9 @@ WHITESUR_SOURCE+=("lib-install.sh")
 
 #-------------------Prepare------------------#
 installation_sorry() {
-  prompt -w "WARNING: We're sorry, your distro isn't officially supported yet."
-  prompt -i "INSTRUCTION: Please make sure you have installed all of the required dependencies. We'll continue the installation in 15 seconds"
-  prompt -i "INSTRUCTION: Press 'ctrl'+'c' to cancel the installation if you haven't install them yet"
+  prompt -w "ERROR: Tu disto aún no es soportada por Pulsar.Macostheme"
+  prompt -i "AVISO: Por favor asegúrese de tener instaladas las dependencias antes de continuar. Comienzo en 15 segundos."
+  prompt -i "Pulse Ctrl+C para cancelar la instaalción si aún no ha instaaldo las dependencias"
   start_animation; sleep 15; stop_animation
 }
 
@@ -63,18 +63,18 @@ prepare_deps() {
   local remote_time=""
   local local_time=""
 
-  prompt -i "DEPS: Checking your internet connection..."
+  prompt -i "DEPS: Comprobando su conexión a internet..."
 
   local_time="$(date -u "+%s")"
 
   if ! remote_time="$(get_utc_epoch_time)"; then
-    prompt -e "DEPS ERROR: You have an internet connection issue\n"; exit 1
+    prompt -e "DEPS ERROR: Error en la conexión a internet\n"; exit 1
   fi
 
   # 5 minutes is the maximum reasonable time delay, so we choose '4' here just
   # in case
   if (( local_time < remote_time-(4*60) )); then
-    prompt -w "DEPS: Your system clock is wrong"
+    prompt -w "DEPS: Tu reloj está mal"
     prompt -i "DEPS: Updating your system clock..."
     # Add "+ 25" here to accomodate potential time delay by sudo prompt
     sudo date -s "@$((remote_time + 25))"
@@ -210,7 +210,7 @@ install_theme_deps() {
   fi
 
   if ! has_command xmllint; then
-    prompt -w "DEPS: 'xmllint' are required for theme installation."
+    prompt -w "DEPS: 'xmllint' es necesario para instalar"
     prepare_deps
 
     if has_command zypper; then
@@ -235,7 +235,7 @@ install_theme_deps() {
 
 install_beggy_deps() {
   if ! has_command convert; then
-    prompt -w "DEPS: 'imagemagick' is required for background editing."
+    prompt -w "DEPS: 'imagemagick' es necesario para la edición del fondo."
     prepare_deps; stop_animation
 
     if has_command zypper; then
@@ -264,7 +264,7 @@ install_dialog_deps() {
   [[ "${silent_mode}" == "true" ]] && return 0
 
   if ! has_command dialog; then
-    prompt -w "DEPS: 'dialog' is required for this option."
+    prompt -w "DEPS: 'dialog' es necesario para esta opción."
     prepare_deps
 
     if has_command zypper; then
@@ -534,7 +534,7 @@ config_gtk4() {
   cp -r "${THEME_SRC_DIR}/assets/gtk/scalable"                                                "${TARGET_DIR}/assets"
   cp -r "${THEME_SRC_DIR}/assets/gtk/windows-assets/titlebutton${alt}${scheme}"               "${TARGET_DIR}/windows-assets"
 
-  prompt -s "\n  Installed ${name}${color}${opacity}${alt}${theme}${scheme} gtk-4.0 theme in '${HOME}/.config/gtk-4.0' for libadwaita!"
+  prompt -s "\n  Instalado ${name}${color}${opacity}${alt}${theme}${scheme} gtk-4.0 theme in '${HOME}/.config/gtk-4.0' para libadwaita!"
 }
 
 install_libadwaita() {
@@ -948,75 +948,75 @@ customize_theme() {
 
   # Darker dark colors
   if [[ "${darker}" == 'true' ]]; then
-    prompt -s "Changing dark color style to darker one ...\n"
+    prompt -s "Cambiando el color a uno más oscuro ...\n"
     sed $SED_OPT "/\$darker/s/false/true/"                                      "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change Nautilus sidarbar size
   if [[ "${sidebar_size}" != 'default' ]]; then
-    prompt -s "Changing Nautilus sidebar size ...\n"
+    prompt -s "Cambiando tamaño de barra lateral de nautilus ...\n"
     sed $SED_OPT "/\$sidebar_size/s/200px/${sidebar_size}px/"                   "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change Nautilus style
   if [[ "${nautilus_style}" != 'stable' ]]; then
-    prompt -s "Changing Nautilus style ...\n"
+    prompt -s "Cambiandop estilo del Nautilus ...\n"
     sed $SED_OPT "/\$nautilus_style/s/stable/${nautilus_style}/"                "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change Nautilus titlebutton placement style
   if [[ "${nautilus_style}" == 'right' ]]; then
-    prompt -s "Changing Nautilus titlebutton placement style ...\n"
+    prompt -s "Cambiando estilo de posicionamiento de Nautilus ...\n"
     sed $SED_OPT "/\$placement/s/left/right/"                                   "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change maximized window radius
   if [[ "${max_round}" == 'true' ]]; then
-    prompt -s "Changing maximized window style ...\n"
+    prompt -s "Cambiando estilo de ventana maximizada ...\n"
     sed $SED_OPT "/\$max_window_style/s/square/round/"                          "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change gnome-shell panel transparency
   if [[ "${panel_opacity}" != 'default' ]]; then
-    prompt -s "Changing panel transparency to ${panel_opacity}% ...\n"
+    prompt -s "Cambiando transparencia del panel a ${panel_opacity}% ...\n"
     sed $SED_OPT "/\$panel_opacity/s/0.15/0.${panel_opacity}/"                  "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change gnome-shell panel height size
   if [[ "${panel_size}" != 'default' ]]; then
-    prompt -s "Changing panel height size to '${panel_size}'...\n"
+    prompt -s "Cambiando tamaño del panel a '${panel_size}'...\n"
     sed $SED_OPT "/\$panel_size/s/default/${panel_size}/"                       "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change gnome-shell show apps button style
   if [[ "${showapps_normal}" == 'true' ]]; then
-    prompt -s "Changing gnome-shell show apps button style ...\n"
+    prompt -s "Cambiando GNOME Shell show apps style ...\n"
     sed $SED_OPT "/\$showapps_button/s/bigsur/normal/"                          "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change gnome-shell font size
   if [[ "${smaller_font}" == 'true' ]]; then
-    prompt -s "Changing gnome-shell font size to smaller ...\n"
+    prompt -s "Cambiando el tamaño de la letra de la shell de GNOME a una más pequeña ...\n"
     sed $SED_OPT "/\$font_size/s/normal/smaller/"                               "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change gnome-shell panel activities button style
   if [[ "${activities_icon}" == 'true' ]]; then
-    prompt -s "Changing gnome-shell panel activities button style ...\n"
+    prompt -s "Cambiando el estilo del botón del panel de actividades de GNOME ...\n"
     sed $SED_OPT "/\$activities/s/default/icon/"                                "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change panel font color
   if [[ "${monterey}" == 'true' ]]; then
     black_font="true"
-    prompt -s "Changing to Monterey style ...\n"
+    prompt -s "Cambiando a estilo Monterey ...\n"
     sed $SED_OPT "/\$monterey/s/false/true/"                                    "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
     sed $SED_OPT "/\$panel_opacity/s/0.15/0.5/"                                 "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
   # Change panel font color
   if [[ "${black_font}" == 'true' ]]; then
-    prompt -s "Changing panel font color ...\n"
+    prompt -s "Cambiando fuente del panel ...\n"
     sed $SED_OPT "/\$panel_font/s/white/black/"                                 "${THEME_SRC_DIR}/sass/_theme-options-temp.scss"
   fi
 
@@ -1037,15 +1037,15 @@ customize_theme() {
 # values are taken from _variables.scss
 
 show_panel_opacity_dialog() {
-  dialogify panel_opacity "${THEME_NAME}" "Choose your panel opacity (Default is 15)" ${PANEL_OPACITY_VARIANTS[*]}
+  dialogify panel_opacity "${THEME_NAME}" "Escoja la opacidad del panel (Se condigurará el predeterminado en 15 segundos)" ${PANEL_OPACITY_VARIANTS[*]}
 }
 
 show_sidebar_size_dialog() {
-  dialogify sidebar_size "${THEME_NAME}" "Choose your Nautilus minimum sidebar size (default is 200px)" ${SIDEBAR_SIZE_VARIANTS[*]}
+  dialogify sidebar_size "${THEME_NAME}" "Escoja el tamaño mínimo de la barra lateral de Nautilus (el predeterminado es 200px)" ${SIDEBAR_SIZE_VARIANTS[*]}
 }
 
 show_nautilus_style_dialog() {
-  dialogify nautilus_style "${THEME_NAME}" "Choose your Nautilus style (default is BigSur-like style)" ${NAUTILUS_STYLE_VARIANTS[*]}
+  dialogify nautilus_style "${THEME_NAME}" "Escoja el estilo del Nautilus (el predeterminado es BigSur-like style)" ${NAUTILUS_STYLE_VARIANTS[*]}
 }
 
 show_needed_dialogs() {
