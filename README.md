@@ -5,7 +5,7 @@
 
   Desde el lanzamiento de `Gnome 43.0`, cada vez más aplicaciones incorporadas usan `libadwaita`, y libadwaita no admite temas personalizados, lo que significa que no podemos cambiar la apariencia de las aplicaciones que usan libadwaita a través de `gnome-tweaks` o `dconf-editor`. ¡Para los usuarios que aman los temas personalizados, esto realmente es molesto!
 
-  De todos modos, si alguien aún quiere personalizar los temas, solo podemos hacerlo de esta manera:
+  De todos modos, si al guien aún quiere personalizar los temas, solo podemos hacerlo de esta manera:
 
   usar el `archivo de tema` para sobrescribir el `archivo de configuración gtk-4.0`. El resultado es que solo se pueden hacer temas fijos haciendo que todas las aplicaciones gtk4 usen un tema y no se pueda cambiar (ni siquiera se puede cambiar al modo oscuro). Si quieres cambiar un tema, solo puedes volver a sobrescribir el `archivo de configuración gtk-4.0` con un nuevo tema. Sé que este método no es perfecto, pero por el momento es la única forma posible de seguir usando temas para las aplicaciones de libadwaita...
 
