@@ -1,62 +1,68 @@
-<h1 align="center"> WhiteSur GTK Theme </h1>
-<p align="center"> <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/macbook.png"/> </p>
+<h1 align="center"> Tema de Pulsar estilo MacOS </h1>
+<p align="center"> <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/picture## Corrección para libadwaita (no del todo perfecta)
 
-<br>
-<p align="center"> <b> A macOS like theme for Linux GTK Desktops </b> </p>
-<br>
+<details> <summary> Detalles <b>(pulsa para abrir)</b> </summary>
 
-## Donate
+  Desde el lanzamiento de `Gnome 43.0`, cada vez más aplicaciones incorporadas usan `libadwaita`, y libadwaita no admite temas personalizados, lo que significa que no podemos cambiar la apariencia de las aplicaciones que usan libadwaita a través de `gnome-tweaks` o `dconf-editor`. ¡Para los usuarios que aman los temas personalizados, esto realmente es molesto!
 
-If you like my project, you can buy me a coffee, many thanks ❤️ !
+  De todos modos, si alguien aún quiere personalizar los temas, solo podemos hacerlo de esta manera:
+
+  usar el `archivo de tema` para sobrescribir el `archivo de configuración gtk-4.0`. El resultado es que solo se pueden hacer temas fijos haciendo que todas las aplicaciones gtk4 usen un tema y no se pueda cambiar (ni siquiera se puede cambiar al modo oscuro). Si quieres cambiar un tema, solo puedes volver a sobrescribir el `archivo de configuración gtk-4.0` con un nuevo tema. Sé que este método no es perfecto, pero por el momento es la única forma posible de seguir usando temas para las aplicaciones de libadwaita...
+
+</details>
+
+## Dona al autor principal
+
+Si et gusta el proyecto cómprale un café al autor principal ❤️ !
 
 <span class="paypal"><a href="https://www.paypal.me/vinceliuice" title="Donate to this project using Paypal"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal donate button" /></a></span>
 
-# Installation is easy!
-<details> <summary> Required dependencies <b>(click to open)</b> </summary>
+# Instalar este tema es sencillamente simple
+<details> <summary> Dependencias necesarias <b>(pulsar para abrir)</b> </summary>
 
-### "Install from source" deps
+### Dependencias para "Instalar desde la fuente"
 - sassc
 - libglib2.0-dev-bin     `ubuntu 20.04`
 - libglib2.0-dev         `ubuntu 18.04` `debian 10.03` `linux mint 19`
 - libxml2-utils          `ubuntu 18.04` `debian 10.03` `linux mint 19`
 - glib2-devel            `Fedora` `Redhat`
 
-### Misc deps
-- imagemagick            `(optional for GDM theme tweak)`
-- dialog                 `(optional for installation in dialog mode)`
-- optipng                `(optional for asset rendering)`
-- inkscape               `(optional for asset rendering)`
+### Dependencias adicionales
+- imagemagick            `(opcional para ajustes del tema GDM)`
+- dialog                 `(opcional para instalación en modo diálogo)`
+- optipng                `(opcional para renderizado de recursos)`
+- inkscape               `(opcional para renderizado de recursos)`
 
-Don't worry, WhiteSur installer already provides all of those dependencies.
+No se preocupe, el instalador le proveerá de estas dependencias...
 </details>
 
-<details> <summary> Recommended GNOME Shell extensions <b>(click to open)</b> </summary>
+<details> <summary> Extensiones de GNOME recomendadas <b>(pulsar para abrir)</b> </summary>
 
-- [user-themes](https://extensions.gnome.org/extension/19/user-themes/) to enable gnome-shell theme (and not just the application theme)
+- [user-themes](https://extensions.gnome.org/extension/19/user-themes/) para activar el tema de gnome-shell que el isntalador aplicará
 - [dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock)
 - [blur-my-shell](https://extensions.gnome.org/extension/3193/blur-my-shell)
 
 </details>
 
-## Quick install
+## instalación rápida
 
-### Installing from source
+### Instalando desde la fuente
 
-1. Run `git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1`
+1. Corre `git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1`
 
-2. Run `./install.sh` to install the default WhiteSur GTK theme pack.
+2. Luego corre `./install.sh` apra instalar el tema por defecto.
 
-### Uninstall
+### Desinstalar
 
-- uninstall Gtk themes: `./install.sh -r`
-- uninstall GDM theme: `sudo ./tweaks.sh -g -r`
-- uninstall Firefox theme: `./tweaks.sh -f -r`
-- uninstall Flatpak Gtk themes: `./tweaks.sh -F -r`
+- Desinstalar temas de GTK: `./install.sh -r`
+- Desinstalar temas de GDM: `sudo ./tweaks.sh -g -r`
+- Desinstalar team de Firefox: `./tweaks.sh -f -r`
+- Desinstalar temas de Flatpack GTK: `./tweaks.sh -F -r`
 
-## There's so many customizations you can do!
-Usage:  `./install.sh [OPTIONS...]`
+## Puedes personalizar a full!
+Escribe:  `./install.sh [OPTIONS...]`
 
-<details> <summary> Options <b>(click to open)</b> </summary>
+<details> <summary> Opciones <b>(pulsa para abrir)</b> </summary>
 
 ```bash
 
@@ -143,9 +149,9 @@ OPTIONS:
 
 </details>
 
-## Fix for libadwaita (not perfect)
+## Corrección para libadwaita (no del todo perfecta)
 
-<details> <summary> Details <b>(click to open)</b> </summary>
+<details> <summary> Detalles <b>(pulsa para abrir)</b> </summary>
 
   Since the release of `Gnome 43.0`, more and more built-in apps use `libadwaita` now, and libadwaita does not support custom themes, which means we cannot change the appearance of app using libadwaita through `gnome-tweaks` or `dconf-editor`. For users who love custom themes, it’s really sucks!
 
@@ -155,129 +161,129 @@ OPTIONS:
 
 </details>
 
-Run this command to install `WhiteSur` into `gtk-4.0 configuration folder` ($HOME/.config/gtk-4.0)
+Ejecuta este comando para instalar `WhiteSur` en la `carpeta de configuración gtk-4.0` ($HOME/.config/gtk-4.0)
 
 ```bash
-./install.sh -l                # Default is the normal dark theme
-./install.sh -l -c light       # install light theme for libadwaita
+./install.sh -l                # Por defecto es el tema oscuro normal
+./install.sh -l -c light       # instalar tema claro para libadwaita
 ```
 
-## <p align="center"> <b> Change theme color and accent </b> </p>
+## <p align="center"> <b> Cambiar color y acento del tema </b> </p>
 <p align="center"> <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/colors-themes.png"/> </p>
 
-#### - Install theme accent
+#### - Instalar acento del tema
 Parameter: `--theme` `-t` (repeatable)
 
-Example:
+Ejemplo:
 
 ```bash
-./install.sh -t red            # install red theme accent only
-./install.sh -t red -t green   # install red and green theme accents
-./install.sh -t all            # install all available theme accents
+./install.sh -t red            # instalar solo el acento rojo del tema
+./install.sh -t red -t green   # instalar los acentos rojo y verde del tema
+./install.sh -t all            # instalar todos los acentos disponibles del tema
 ```
 
-## <p align="center"> <b> Change Nautilus style </b> </p>
+## <p align="center"> <b> Cambiar el estilo de Nautilus </b> </p>
 <p align="center"> <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/nautilus.png"/> </p>
 
 Parameter: `--nautilus` `-N`
 
 Example: `./install.sh -N mojave`
 
-## <p align="center"> <b> Explore more customization features! </b> </p>
-You can run `./install.sh -h` to explore more customization features we have
-like changing panel opacity, theme opacity (normal and solid variant), window
-control button variant, etc.
+## <p align="center"> <b> ¡Explora más características de personalización! </b> </p>
+Puedes ejecutar `./install.sh -h` para explorar más opciones de personalización
+como cambiar la opacidad del panel, la opacidad del tema (variante normal y sólida),
+la variante de los botones de control de ventana, etc.
 
-# <p align="center"> <b> Let's tweak! </b> </p>
-Usage:  `./tweaks.sh [OPTIONS...]`
+# <p align="center"> <b> ¡Vamos a hacer ajustes! </b> </p>
+Uso:  `./tweaks.sh [OPCIONES...]`
 
-<details> <summary> Options <b>(click to open)</b> </summary>
+<details> <summary> Opciones <b>(pulsar para abrir)</b> </summary>
 
 ```bash
 
-OPTIONS:
+OPCIONES:
   -o, --opacity [normal|solid]
-   Set 'WhiteSur' GDM/Flatpak theme opacity variants. Default is 'normal'
+   Establecer variantes de opacidad del tema 'WhiteSur' GDM/Flatpak. Por defecto es 'normal'
 
   -c, --color [light|dark]
-   Set 'WhiteSur' GDM/Flatpak theme color variants. Default is 'light'
+   Establecer variantes de color del tema 'WhiteSur' GDM/Flatpak. Por defecto es 'light'
 
   -t, --theme [default|blue|purple|pink|red|orange|yellow|green|grey]
-   Set 'WhiteSur' GDM/Flatpak theme accent color. Default is BigSur-like theme
+   Establecer color de acento del tema 'WhiteSur' GDM/Flatpak. Por defecto es estilo BigSur
 
   -s, --scheme [standard|nord]
-   Set 'WhiteSur' GDM/Flatpak theme colorscheme style. Default is 'standard'
+   Establecer estilo de esquema de colores del tema 'WhiteSur' GDM/Flatpak. Por defecto es 'standard'
 
    
- Tweaks for GDM theme. options
+ Ajustes para el tema GDM. opciones
 
-  -g, --gdm    Without options default GDM theme will install... 
+  -g, --gdm    Sin opciones se instalará el tema GDM por defecto... 
 
-      1. -i, -icon [apple|simple|gnome|ubuntu|tux|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|budgie|gentoo]   Set GDM panel 'Activities' icon Default is 'standard'
+      1. -i, -icon [apple|simple|gnome|ubuntu|tux|arch|manjaro|fedora|debian|void|opensuse|popos|mxlinux|zorin|budgie|gentoo]   Establecer icono de 'Actividades' del panel GDM. Por defecto es 'standard'
 
-      2. -b, -background [default|blank|IMAGE_PATH]   Set GDM background image Default is BigSur-like wallpaper
+      2. -b, -background [default|blank|IMAGE_PATH]   Establecer imagen de fondo GDM. Por defecto es fondo estilo BigSur
 
-      3. -p, -panelopacity [default|30|45|60|75]   Set GDM panel transparency Default is 15%
+      3. -p, -panelopacity [default|30|45|60|75]   Establecer transparencia del panel GDM. Por defecto es 15%
 
-      4. -h, -panelheight [default|smaller|bigger]   Set GDM panel height size Default is 32px
+      4. -h, -panelheight [default|smaller|bigger]   Establecer altura del panel GDM. Por defecto es 32px
 
-      5. -sf, -smallerfont    Set GDM font size to smaller (10pt) Default is 11pt
+      5. -sf, -smallerfont    Establecer tamaño de fuente GDM más pequeño (10pt). Por defecto es 11pt
 
-      6. -nd, -nodarken    Don't darken 'WhiteSur' GDM theme background image 
+      6. -nd, -nodarken    No oscurecer la imagen de fondo del tema GDM 'WhiteSur'
 
-      7. -nb, -noblur    Don't blur 'WhiteSur' GDM theme background image 
+      7. -nb, -noblur    No desenfocar la imagen de fondo del tema GDM 'WhiteSur'
 
    
- Tweaks for firefox. options
+ Ajustes para Firefox. opciones
 
-  -f, --firefox         [(monterey|flat)|alt|(darker|adaptive)]   Without options default WhiteSur theme will install...   Options:
+  -f, --firefox         [(monterey|flat)|alt|(darker|adaptive)]   Sin opciones se instalará el tema WhiteSur por defecto...   Opciones:
 
-      1. monterey       [3+3|3+4|3+5|4+3|4+4|4+5|5+3|5+4|5+5]   Topbar buttons number: 'a+b'   a: left side buttons number, b: right side buttons number
+      1. monterey       [3+3|3+4|3+5|4+3|4+4|4+5|5+3|5+4|5+5]   Número de botones en la barra superior: 'a+b'   a: número de botones del lado izquierdo, b: número de botones del lado derecho
 
-      2. flat           Monterey alt version    Flat round tabs...
+      2. flat           Versión alternativa de Monterey    Pestañas redondas planas...
 
-      3. alt            Alt windows button version    Alt windows button style like gtk theme
+      3. alt            Versión alternativa de botones de ventana    Estilo de botones de ventana como el tema gtk
 
-      4. darker         Darker Firefox theme version    Darker Firefox theme version
+      4. darker         Versión oscura del tema Firefox    Versión más oscura del tema Firefox
 
-      5. nord           Nord Firefox colorscheme version    Nord Firefox colorscheme version
+      5. nord           Versión del esquema de colores Nord    Versión del esquema de colores Nord para Firefox
 
-      6. adaptive       Adaptive color version   You need install adaptive-tab-bar-colour plugin first   https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/
+      6. adaptive       Versión de color adaptativo   Necesitas instalar primero el complemento adaptive-tab-bar-colour   https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/
 
   -e, --edit-firefox [(monterey|flat)|alt|(darker|adaptive)]
-   Edit 'WhiteSur' theme for Firefox settings and also connect the theme to the current Firefox profiles. 
+   Editar el tema 'WhiteSur' para la configuración de Firefox y también conectar el tema a los perfiles actuales de Firefox. 
 
    
- Others. options
+ Otras opciones
 
-  -F, --flatpak Support options: [-o, -c, -t...]   Connect 'WhiteSur' theme to Flatpak Without options will only install default themes
+  -F, --flatpak Opciones de soporte: [-o, -c, -t...]   Conectar el tema 'WhiteSur' a Flatpak. Sin opciones solo se instalarán los temas por defecto
 
-      1.  -o, --opacity [normal|solid]   Set 'WhiteSur' flatpak theme opacity variants Default is 'normal'
+      1.  -o, --opacity [normal|solid]   Establecer variantes de opacidad del tema 'WhiteSur' para flatpak. Por defecto es 'normal'
 
-      2.  -c, --color [Light|Dark]   Set 'WhiteSur' flatpak theme color variants Default is 'light'
+      2.  -c, --color [Light|Dark]   Establecer variantes de color del tema 'WhiteSur' para flatpak. Por defecto es 'light'
 
-      3.  -t, --theme [default|blue|purple|pink|red|orange|yellow|green|grey]   Set 'WhiteSur' flatpak theme accent color Default is BigSur-like theme
+      3.  -t, --theme [default|blue|purple|pink|red|orange|yellow|green|grey]   Establecer color de acento del tema 'WhiteSur' para flatpak. Por defecto es estilo BigSur
 
-      4.  -s, --scheme [standard|nord]   Set 'WhiteSur' flatpak theme colorscheme style Default is 'standard'
+      4.  -s, --scheme [standard|nord]   Establecer estilo de esquema de colores del tema 'WhiteSur' para flatpak. Por defecto es 'standard'
 
   -d, --dash-to-dock 
-   Fixed Dash to Dock theme issue. 
+   Corregir problema del tema Dash to Dock. 
 
   -r, --remove, --revert 
-   Revert to the original themes, do the opposite things of install and connect. 
+   Revertir a los temas originales, hacer lo opuesto a instalar y conectar. 
 
   --silent-mode 
-   Meant for developers: ignore any confirm prompt and params become more strict. 
+   Para desarrolladores: ignorar cualquier confirmación y hacer los parámetros más estrictos. 
 
   -h, --help 
-   Show this help. 
+   Mostrar esta ayuda. 
 
 ```
 
 </details>
 
-## There's more themes you can try!
-### <p align="center"> <b> Install and edit Firefox theme </b> </p>
+## ¡Hay más temas que puedes probar!
+### <p align="center"> <b> Instalar y editar tema de Firefox </b> </p>
 
 <p align="center"> <a href="src/other/firefox">
 <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/firefox.svg"/>
@@ -301,70 +307,70 @@ Example:
 
 ##
 
-### <p align="center"> <b> Install and customize GDM theme </b> </p>
+### <p align="center"> <b> Instalar y personalizar el tema GDM </b> </p>
 <p align="center"> <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/gdm.png"/> </p>
 
-#### - Install GDM theme
-Parameter: `--gdm` `-g` (requires to be run as root)
+#### - Instalar tema GDM
+Parámetro: `--gdm` `-g` (requiere ser ejecutado como root)
 
-Example: `sudo ./tweaks.sh -g`
+Ejemplo: `sudo ./tweaks.sh -g`
 
-#### - Change the background
-Parameter: `--background` `-b`
+#### - Cambiar el fondo
+Parámetro: `--background` `-b`
 
-Example:
-
-```bash
-sudo ./tweaks.sh -g -b "my picture.jpg" # use the custom background
-sudo ./tweaks.sh -g -b default          # use the default background
-sudo ./tweaks.sh -g -b blank            # make it blank
-```
-
-#### - Don't darken the background
-Parameter: `--nodarken` `-nd`
-
-Example:
+Ejemplo:
 
 ```bash
-sudo ./tweaks.sh -g -nd                          # darken the default background
-sudo ./tweaks.sh -g -nd -b "wallpapers/snow.jpg" # darken the custom background
+sudo ./tweaks.sh -g -b "mi imagen.jpg" # usar un fondo personalizado
+sudo ./tweaks.sh -g -b default         # usar el fondo predeterminado
+sudo ./tweaks.sh -g -b blank           # dejarlo en blanco
 ```
 
-#### - Don't blur the background
-Parameter: `--noblur` `-nb`
+#### - No oscurecer el fondo
+Parámetro: `--nodarken` `-nd`
 
-Example:
+Ejemplo:
 
 ```bash
-sudo ./tweaks.sh -g -nb                           # don't blur the default background
-sudo ./tweaks.sh -g -nb -b "wallpapers/rocks.jpg" # don't blur the custom background
+sudo ./tweaks.sh -g -nd                          # no oscurecer el fondo predeterminado
+sudo ./tweaks.sh -g -nd -b "wallpapers/snow.jpg" # no oscurecer el fondo personalizado
 ```
 
-#### - Do more GDM customizations
-You can do [the similar customization features in `./install.sh`](#theres-so-many-customizations-you-can-do)
-like changing theme color (dark and light variant) and accent, GNOME Shell
-'Activities' icon, etc. related to GDM. Run `./tweaks.sh -h` to explore!
+#### - No desenfocar el fondo
+Parámetro: `--noblur` `-nb`
+
+Ejemplo:
+
+```bash
+sudo ./tweaks.sh -g -nb                           # no desenfocar el fondo predeterminado
+sudo ./tweaks.sh -g -nb -b "wallpapers/rocks.jpg" # no desenfocar el fondo personalizado
+```
+
+#### - Realizar más personalizaciones de GDM
+Puedes realizar [las mismas personalizaciones que en `./install.sh`](#theres-so-many-customizations-you-can-do)
+como cambiar el color del tema (variante clara y oscura) y acentos, el ícono de
+'Actividades' de GNOME Shell, etc. relacionados con GDM. ¡Ejecuta `./tweaks.sh -h` para explorar!
 
 ##
 
-### <p align="center"> <b> Fix for Flatpak </b> </p>
+### <p align="center"> <b> Corrección para Flatpak </b> </p>
 
-#### 1. Run command to fix it
+#### 1. Ejecuta el comando para corregirlo
 
 ```sh
 sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
 ```
 
-If you use flatpak apps, you can run this to fix theme issue
+Si usas aplicaciones flatpak, puedes ejecutar esto para corregir problemas con el tema
 
-#### 2. Connect WhiteSur theme to Flatpak (gtk 3.0) (Snap not support)
+#### 2. Conectar el tema WhiteSur a Flatpak (gtk 3.0) (Snap no es compatible)
 
-Parameter: `--flatpak` `-F`
+Parámetro: `--flatpak` `-F`
 
-Example: `./tweaks.sh -F`
+Ejemplo: `./tweaks.sh -F`
 
-## <p align="center"> <b> Other recommended stuff </b> </p>
-### <p align="center"> <b> WhiteSur Icon Theme </b> </p>
+## <p align="center"> <b> Otras recomendaciones </b> </p>
+### <p align="center"> <b> Tema de iconos WhiteSur </b> </p>
 <p align="center"> <a href="https://github.com/vinceliuice/WhiteSur-icon-theme">
   <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/icon-theme.png"/>
 </a> </p>
@@ -374,7 +380,7 @@ Example: `./tweaks.sh -F`
 </a> </p>
 <br>
 
-### <p align="center"> <b> WhiteSur Wallpapers </b> </p>
+### <p align="center"> <b> Fondos de pantalla WhiteSur </b> </p>
 <p align="center"> <a href="https://github.com/vinceliuice/WhiteSur-wallpapers">
   <img class="image" src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/pictures/pictures/wallpaper.gif"/>
 </a> </p>
@@ -384,5 +390,5 @@ Example: `./tweaks.sh -F`
 </a> </p>
 <br>
 
-## Technical details and getting involved
-Please go read [CONTRIBUTING.md](.github/CONTRIBUTING.md) for more info
+## Detalles técnicos y cómo participar
+Por favor, lee [CONTRIBUTING.md](.github/CONTRIBUTING.md) para más información
