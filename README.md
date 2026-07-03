@@ -1,3 +1,5 @@
+> [!WARNING]
+> This project is no longer maintained or has been moved to [github.com/InledGroup](https://github.com/InledGroup) or [github.com/Inled-Pulsar-OS](https://github.com/Inled-Pulsar-OS)
 <h1 align="center"> Tema de Pulsar estilo MacOS </h1>
 <p align="center"> <img src="https://github.com/vinceliuice/WhiteSur-gtk-theme/blob/picture## Corrección para libadwaita (no del todo perfecta)
 
